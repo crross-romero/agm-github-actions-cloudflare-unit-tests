@@ -1,0 +1,22 @@
+name: AGM Workflow
+
+on:
+  push: 
+    branches:
+      - master
+      - unit-test
+
+jobs:
+  dev-environment:
+    runs-on: ubuntu-latest
+    environment: develop
+    steps:
+      - name: Print environment variables
+      - run: echo "ENVIRONMENT: ${{ env.ENVIRONMENT }}"
+
+  dev-environment:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Print environment variables
+      - run: echo "ENVIRONMENT: ${{ env.ENVIRONMENT }}"
