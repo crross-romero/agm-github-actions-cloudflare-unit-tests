@@ -12,11 +12,11 @@ jobs:
     environment: develop
     steps:
       - name: Print environment variables
-      - run: echo "ENVIRONMENT: ${{ env.ENVIRONMENT }}"
+        run: yarn test
 
   dev-environment:
     runs-on: ubuntu-latest
     environment: staging
     steps:
       - name: Print environment variables
-      - run: echo "ENVIRONMENT: ${{ env.ENVIRONMENT }}"
+        run: yarn test
